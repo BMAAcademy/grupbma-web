@@ -1,0 +1,104 @@
+.pageHeader {
+  background: var(--color-surface);
+  padding: var(--space-xl) 0 var(--space-lg);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 0;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+}
+
+.productCard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .productCard {
+    flex-direction: row;
+    align-items: center;
+  }
+  .productCard:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.productImage {
+  flex: 1;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+  min-height: 300px;
+  position: relative;
+}
+
+.productImage::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 180, 216, 0.1);
+}
+
+.placeholderText {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+.productContent {
+  flex: 1;
+  padding: var(--space-lg);
+}
+
+.productTitle {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.productDesc {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+}
+
+.featuresList {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.featuresList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-main);
+}
+
+.featuresList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
