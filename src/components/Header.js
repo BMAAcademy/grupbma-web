@@ -23,7 +23,8 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={`container ${styles.headerContainer}`}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" className={styles.logo} style={{ display: "flex", alignItems: "center" }}>
+          <img src="/logo.png" alt="Grup BMA Logo" style={{ height: "45px", objectFit: "contain", marginRight: "10px" }} />
           <span className="text-gradient" style={{ fontWeight: 800, fontSize: "1.5rem" }}>Grup BMA</span>
         </Link>
 

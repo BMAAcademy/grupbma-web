@@ -16,7 +16,7 @@ export default function Urunler() {
         "İşe Alım ve Terfi Kararlarında Veri Odaklı Yaklaşım",
         "Kültürel Uyum ve Risk Analizi"
       ],
-      imageLabel: "Hibrit Analiz Şeması Gelecek"
+      image: "/images/bma_hybrid_analysis_1777320533579.png"
     },
     {
       title: "AI Coach",
@@ -26,7 +26,7 @@ export default function Urunler() {
         "Anlık Performans Geri Bildirimi",
         "BMA Modeli ile Entegre Gelişim Planı"
       ],
-      imageLabel: "AI Coach Robot Görseli"
+      image: "/images/ai_coach_1777320546144.png"
     },
     {
       title: "Executive AI Assistant",
@@ -36,7 +36,7 @@ export default function Urunler() {
         "Veri Analizi ve Rapor Üretimi",
         "Yüksek Güvenlikli Kurumsal Bilgi Yönetimi"
       ],
-      imageLabel: "Executive AI Assistant"
+      image: "/images/ai_executive_assistant_1777320641197.png"
     },
     {
       title: "AI Avukat",
@@ -46,7 +46,7 @@ export default function Urunler() {
         "Mevzuat ve İçtihat Taraması",
         "7/24 Hukuki Taslak Desteği"
       ],
-      imageLabel: "AI Avukat (Yapay Zeka Görseli Üretilecek)"
+      image: "/images/ai_lawyer_1777320674062.png"
     },
     {
       title: "AI Müşteri Temsilcisi",
@@ -56,7 +56,7 @@ export default function Urunler() {
         "Duygu Analizi (Sentiment Analysis) ve Empati",
         "CRM Otomasyonu"
       ],
-      imageLabel: "AI Müşteri Temsilcisi (Yapay Zeka Görseli Üretilecek)"
+      image: "/images/ai_customer_rep_1777321452475.png"
     },
     {
       title: "AI Satış Botu",
@@ -66,7 +66,7 @@ export default function Urunler() {
         "Otomatik Teklif ve PDF Üretimi",
         "Takvim ve Randevu Entegrasyonu"
       ],
-      imageLabel: "AI Satış Botu (Yapay Zeka Görseli Üretilecek)"
+      image: "/images/ai_sales_bot_1777321464595.png"
     },
     {
       title: "AI Markanız (Tailor-Made Çözüm)",
@@ -76,7 +76,7 @@ export default function Urunler() {
         "Yüksek Güvenlik (On-Premise veya Private Cloud)",
         "İç İletişim ve Oryantasyon Otomasyonu"
       ],
-      imageLabel: "Size Özel Yapay Zeka (AI Markanız)"
+      image: "/logo.png"
     }
   ];
 
@@ -94,9 +94,8 @@ export default function Urunler() {
           <div style={{ display: "flex", flexDirection: "column", gap: "4rem" }}>
             {products.map((product, index) => (
               <div key={index} className={styles.productCard}>
-                <div className={styles.productImage}>
-                  {/* Buraya sonradan Image componenti gelecek, şimdilik placeholder */}
-                  <span className={styles.placeholderText}>{product.imageLabel}</span>
+                <div className={styles.productImage} style={{ padding: 0, overflow: 'hidden' }}>
+                  <img src={product.image} alt={product.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </div>
                 <div className={styles.productContent}>
                   <h2 className={styles.productTitle}>{product.title}</h2>
