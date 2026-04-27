@@ -36,10 +36,9 @@ export default function Home() {
         <div className={styles.heroBackground}></div>
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroSubtitle}>Geleceğin İnsan Kaynakları ve Satış Teknolojileri</span>
-          <h1>Kurumsal Potansiyelinizi <br /><span className="text-gradient">Yapay Zeka</span> ile Açığa Çıkarın</h1>
+          <h1>Şirketinizi <span className="text-gradient">Yapay Zeka</span> ile Ölçekleyin</h1>
           <p className={styles.heroText}>
-            Hibrit analiz sistemleri ve kurumunuza özel eğitilmiş yapay zeka asistanlarıyla
-            performansı, verimliliği ve satışı maksimize edin.
+            İş süreçlerinizi AI ile daha hızlı, akıllı ve verimli hale getirin. Hibrit analiz sistemleri ve kurumunuza özel eğitilmiş yapay zeka asistanlarıyla performansı, verimliliği ve satışı maksimize edin.
           </p>
           <div className={styles.heroButtons}>
             <button className="btn btn-primary" onClick={openDemo}>Hemen Demo İste</button>

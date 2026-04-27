@@ -16,67 +16,99 @@ export default function Urunler() {
         "İşe Alım ve Terfi Kararlarında Veri Odaklı Yaklaşım",
         "Kültürel Uyum ve Risk Analizi"
       ],
-      image: "/images/bma_hybrid_analysis_1777320533579.png"
+      image: "/images/bma_hibrit_analiz.png"
     },
     {
-      title: "AI Coach",
-      desc: "Çalışanlarınızın performansını artırmak için 7/24 yanlarında olan yapay zeka destekli gelişim modülü. Sürekli geri bildirim verir, satış senaryoları çalıştırır ve eksik yetkinlikleri tespit ederek kişiselleştirilmiş eğitim önerileri sunar.",
+      title: "AI Coach – BEMA",
+      desc: "Şirketinizin tüm ürün, süreç ve müşteri verisini öğrenerek satıştan operasyona kadar her noktada aktif rol alan yapay zeka destekli akıllı iş asistanı. Doğru ürünü önerir, teklif hazırlar, süreçleri yönetir ve tüm kararlarını hem veriye hem de çalışan karakter analizine göre optimize eder.",
       features: [
-        "Sesli ve Yazılı Rol Oyunu (Role-Play) Yeteneği",
-        "Anlık Performans Geri Bildirimi",
-        "BMA Modeli ile Entegre Gelişim Planı"
+        "Ürün ve Teknik Dokümantasyon Hakimiyeti",
+        "Akıllı Ürün Öneri ve Problem Çözme Yeteneği",
+        "Karakter Analizine Göre Kişiselleştirilmiş Yönlendirme",
+        "CRM / ERP Entegrasyonu ile Anlık Raporlama",
+        "Otomatik Teklif Hazırlama ve Gönderim",
+        "Toplantı Planlama ve Takip",
+        "WhatsApp & Telegram Üzerinden Sesli / Yazılı Yönetim"
       ],
-      image: "/images/ai_coach_1777320546144.png"
+      image: "/images/ai_coach.png"
     },
     {
-      title: "Executive AI Assistant",
-      desc: "Yöneticiler için tasarlanmış yeni nesil yapay zeka asistanı. Toplantı notları çıkarır, CRM verilerini analiz eder, pazar trendlerini özetler ve stratejik kararlarınızda size saniyeler içinde veri sunar.",
+      title: "Executive AI Assistant – VERA",
+      desc: "Yöneticiler için tasarlanmış yeni nesil yapay zeka destekli karar asistanı. Toplantıları organize eder, görüşme notlarını özetler, CRM / ERP verilerini analiz eder ve pazar gelişmelerini takip ederek stratejik kararlar için ihtiyaç duyulan bilgiyi saniyeler içinde yönetime sunar.",
       features: [
-        "Toplantı Organizasyonu ve Özetleme",
-        "Veri Analizi ve Rapor Üretimi",
+        "Toplantı Organizasyonu ve Görüşme Özeti",
+        "CRM / ERP Verileriyle Yönetici Raporlama",
+        "Pazar Trendleri ve Rekabet İçgörüleri",
+        "Stratejik Karar Destek Sistemi",
         "Yüksek Güvenlikli Kurumsal Bilgi Yönetimi"
       ],
-      image: "/images/ai_executive_assistant_1777320641197.png"
+      image: "/images/ai_executive_assistant.png"
     },
     {
-      title: "AI Avukat",
-      desc: "Hukuk departmanınızın iş yükünü hafifleten, sözleşmeleri saniyeler içinde tarayan, emsal kararları bulan ve temel hukuki metinleri taslaklandıran uzman yapay zeka asistanı.",
+      title: "AI Avukat – JURA",
+      desc: "Avukatlar, hukuk büroları ve şirketlerin hukuk departmanları için geliştirilen yapay zeka destekli hukuk asistanı. Sözleşmeleri analiz eder, riskli maddeleri tespit eder, mevzuat ve içtihat araştırmalarını hızlandırır; dilekçe, sözleşme ve hukuki metin taslaklarında güçlü bir ön hazırlık desteği sunar.",
       features: [
         "Sözleşme İnceleme ve Risk Tespiti",
-        "Mevzuat ve İçtihat Taraması",
-        "7/24 Hukuki Taslak Desteği"
+        "Mevzuat ve İçtihat Araştırma Desteği",
+        "Güncel Mevzuat Değişikliklerini Takip",
+        "Dilekçe, Sözleşme ve Hukuki Metin Taslakları",
+        "Dava Dosyası ve Belge Özetleme",
+        "Hukuk Büroları ve Kurumsal Hukuk Departmanları İçin Kullanım",
+        "7/24 Hukuki Ön Hazırlık Asistanı"
       ],
-      image: "/images/ai_lawyer_1777320674062.png"
+      image: "/images/ai_hukuk_danismani.png"
     },
     {
-      title: "AI Müşteri Temsilcisi",
-      desc: "Müşterilerinizle sadece SSS üzerinden değil, insan doğallığında empati kurarak konuşabilen, satış kapama yeteneğine sahip akıllı bot. WhatsApp, Web veya Santral entegrasyonu mevcuttur.",
+      title: "AI Müşteri Temsilcisi – NORA",
+      desc: "Müşterilerinizle WhatsApp, web sitesi veya santral üzerinden doğal ve empatik şekilde iletişim kuran yapay zeka destekli müşteri temsilcisi. Sık sorulan soruları yanıtlar, talepleri sınıflandırır, CRM’e işler ve uygun durumlarda satış fırsatlarını ilgili ekibe yönlendirir.",
       features: [
-        "Çoklu Kanal (Omnichannel) Desteği",
-        "Duygu Analizi (Sentiment Analysis) ve Empati",
-        "CRM Otomasyonu"
+        "Çoklu Kanal İletişim Desteği",
+        "Duygu Analizi ve Empatik Yanıt Yeteneği",
+        "SSS ve Ürün Bilgisiyle Akıllı Yanıtlama",
+        "CRM Otomasyonu ve Talep Kaydı",
+        "Satış Fırsatı Tespiti ve Yönlendirme",
+        "WhatsApp / Web Sitesi / Santral Entegrasyonu"
       ],
-      image: "/images/ai_customer_rep_1777321452475.png"
+      image: "/images/customer_support.png"
     },
     {
-      title: "AI Satış Botu",
-      desc: "Sıcak lead (potansiyel müşteri) havuzunuza otomatik ulaşıp, ön eleme yapan, teklif ileten ve randevu koparan satış odaklı otonom sistem.",
+      title: "AI Satış Botu – VEXA",
+      desc: "Potansiyel müşterilerle otomatik iletişime geçen, ihtiyaç analizi yapan, lead kalitesini ölçen, teklif sürecini başlatan ve randevu oluşturan satış odaklı yapay zeka sistemi.",
       features: [
-        "Lead Puanlama (Lead Scoring)",
+        "Lead Puanlama ve Ön Eleme",
         "Otomatik Teklif ve PDF Üretimi",
-        "Takvim ve Randevu Entegrasyonu"
+        "Takvim ve Randevu Entegrasyonu",
+        "WhatsApp / Web Sitesi / Sosyal Medya Üzerinden İletişim",
+        "Satış Ekibine Hazır Müşteri Aktarımı"
       ],
-      image: "/images/ai_sales_bot_1777321464595.png"
+      image: "/images/sales_bot.png"
     },
     {
-      title: "AI Markanız (Tailor-Made Çözüm)",
-      desc: "Kurumunuzun kendi verileriyle eğitilmiş, tamamen size özel (Private LLM) yapay zeka asistanı. Çalışanlarınız şirket politikalarını, ürün kataloglarını ve iç işleyişi doğrudan bu bottan öğrenebilir.",
+      title: "AI Otomasyon Ajanları (Tailor-Made) – BMA",
+      desc: "İhtiyacınıza göre sıfırdan tasarlanan yapay zeka ajanlarıyla iş süreçlerinizi otomatikleştirin. İç operasyonlardan pazarlamaya kadar her görev; veri analizi, içerik üretimi, entegrasyon ve aksiyon alma dahil olmak üzere uçtan uca sizin adınıza yönetilir.",
       features: [
-        "Kuruma Özel Veri Tabanı Eğitimi",
-        "Yüksek Güvenlik (On-Premise veya Private Cloud)",
-        "İç İletişim ve Oryantasyon Otomasyonu"
+        "İhtiyaca Özel AI Ajan Geliştirme",
+        "İş Süreçlerinin Uçtan Uca Otomasyonu",
+        "API, CRM, ERP ve 3. Parti Sistem Entegrasyonları",
+        "İçerik Üretimi ve Yayınlama Otomasyonları",
+        "Veri Analizi ve Aksiyon Tetikleme",
+        "Private Cloud / On-Premise Kurulum Seçenekleri",
+        "Yüksek Güvenlikli Kurumsal Altyapı"
       ],
-      image: "/logo.png"
+      image: "/images/tailor_made.png"
+    },
+    {
+      title: "AI Destekli Web Sitesi & Landing Page Çözümleri",
+      desc: "İşinize özel tasarlanan, yüksek dönüşüm odaklı web siteleri ve landing page’ler ile dijital varlığınızı güçlendirin. Satış, lead toplama ve marka konumlandırma hedeflerinize uygun olarak hızlı, modern ve optimize edilmiş sayfalar oluşturulur.",
+      features: [
+        "Kurumsal Web Sitesi Tasarımı",
+        "Landing Page ve Satış Sayfası Oluşturma",
+        "Dönüşüm (Conversion) Odaklı UX/UI Tasarım",
+        "Hızlı Kurulum ve Yayına Alma",
+        "SEO ve Performans Optimizasyonu",
+        "AI Destekli İçerik ve Metin Üretimi"
+      ],
+      image: "/images/web_tasarimi_hizmeti.png"
     }
   ];
 

@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: calc(var(--space-xl) * 1.5) 0 var(--space-xl);
+  padding: calc(var(--space-xl) * 0.8) 0 var(--space-xl);
   text-align: center;
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-surface) 0%, #ffffff 100%);
