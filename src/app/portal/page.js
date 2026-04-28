@@ -3,63 +3,48 @@ import { useState } from "react";
 import styles from "./portal.module.css";
 
 export default function Portal() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeTab, setActiveTab] = useState("login");
+  const [status, setStatus] = useState("idle"); // idle, sending, success, error
+  const [registerData, setRegisterData] = useState({
+    company: "",
+    name: "",
+    phone: "",
+    email: "",
+  });
 
-  const handleAuth = (e) => {
+  const handleLoginAttempt = (e) => {
     e.preventDefault();
-    // Simulate login
-    setIsLoggedIn(true);
+    // Login devre dışı — hiç kimse giriş yapamaz
+    alert("Kurumsal portal erişimi şu anda aktif değildir. Erişim talebi oluşturmak için 'Kayıt Talebi' sekmesini kullanınız.");
+    setActiveTab("register");
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/portal-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(registerData),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setTimeout(() => {
+          setStatus("idle");
+          setRegisterData({ company: "", name: "", phone: "", email: "" });
+        }, 5000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 3000);
+      }
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    }
   };
-
-  if (isLoggedIn) {
-    return (
-      <div className={styles.portalContainer}>
-        <div className={styles.dashboard}>
-          <div className={styles.dashboardHeader}>
-            <div>
-              <h1 className="text-gradient">Kurumsal Portal</h1>
-              <p>Hoş geldiniz, ABC Teknoloji A.Ş.</p>
-            </div>
-            <button className="btn btn-outline" onClick={handleLogout}>Çıkış Yap</button>
-          </div>
-
-          <div className={styles.modulesGrid}>
-            {/* Hibrit Analiz Modülü */}
-            <div className={styles.moduleCard}>
-              <h3>🧩 BMA Hibrit Analiz</h3>
-              <p>Adaylarınız veya çalışanlarınız için yeni bir analiz sınavı başlatın veya mevcut sonuçları görüntüleyin.</p>
-              <button className="btn btn-primary" style={{ width: "100%", marginBottom: "0.5rem" }}>Yeni Sınav Linki Oluştur</button>
-              <button className="btn btn-outline" style={{ width: "100%" }}>Geçmiş Raporlar</button>
-            </div>
-
-            {/* AI Coach Modülü */}
-            <div className={styles.moduleCard}>
-              <h3>🤖 AI Coach Yönetimi</h3>
-              <p>Satış veya iletişim ekibiniz için AI Coach kullanıcıları tanımlayın ve performans skorlarını izleyin.</p>
-              
-              <div className={styles.userList}>
-                <div style={{ fontWeight: 600, marginBottom: "0.5rem" }}>Aktif Kullanıcılar:</div>
-                <div className={styles.userItem}>
-                  <span>Ahmet Yılmaz (Satış)</span>
-                  <span style={{ color: "green" }}>Skor: 85/100</span>
-                </div>
-                <div className={styles.userItem}>
-                  <span>Ayşe Demir (Müşteri Tem.)</span>
-                  <span style={{ color: "green" }}>Skor: 92/100</span>
-                </div>
-              </div>
-              <button className="btn btn-outline" style={{ width: "100%", marginTop: "1rem" }}>+ Yeni Kullanıcı Tanımla</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className={styles.portalContainer}>
@@ -80,7 +65,7 @@ export default function Portal() {
         </div>
 
         {activeTab === "login" ? (
-          <form onSubmit={handleAuth}>
+          <form onSubmit={handleLoginAttempt}>
             <div className={styles.formGroup}>
               <label>Kurumsal E-posta</label>
               <input type="email" required placeholder="ornek@sirket.com" />
@@ -92,25 +77,70 @@ export default function Portal() {
             <button type="submit" className="btn btn-primary" style={{ width: "100%", marginTop: "1rem" }}>
               Sisteme Giriş
             </button>
+            <p style={{ textAlign: "center", marginTop: "1rem", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+              ⚠️ Portal erişimi yalnızca yetkili kurumsal kullanıcılara açıktır.
+            </p>
           </form>
         ) : (
-          <form onSubmit={(e) => { e.preventDefault(); alert("Kayıt talebiniz alındı, yetkililerimiz size ulaşacak."); setActiveTab("login"); }}>
-            <div className={styles.formGroup}>
-              <label>Şirket Adı</label>
-              <input type="text" required />
-            </div>
-            <div className={styles.formGroup}>
-              <label>Yetkili Kişi</label>
-              <input type="text" required />
-            </div>
-            <div className={styles.formGroup}>
-              <label>Kurumsal E-posta</label>
-              <input type="email" required />
-            </div>
-            <button type="submit" className="btn btn-primary" style={{ width: "100%", marginTop: "1rem" }}>
-              Kayıt Talebi Gönder
-            </button>
-          </form>
+          <>
+            {status === "success" ? (
+              <div style={{ textAlign: "center", padding: "2rem 0" }}>
+                <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>✅</div>
+                <h3 className="text-gradient">Talebiniz Alındı!</h3>
+                <p style={{ color: "var(--text-secondary)", marginTop: "0.5rem" }}>
+                  Ekibimiz en kısa sürede sizinle iletişime geçecektir.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleRegister}>
+                <div className={styles.formGroup}>
+                  <label>Şirket Adı</label>
+                  <input 
+                    type="text" required 
+                    value={registerData.company}
+                    onChange={(e) => setRegisterData({...registerData, company: e.target.value})}
+                    disabled={status === "sending"}
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label>Yetkili Kişi</label>
+                  <input 
+                    type="text" required 
+                    value={registerData.name}
+                    onChange={(e) => setRegisterData({...registerData, name: e.target.value})}
+                    disabled={status === "sending"}
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label>Telefon Numarası</label>
+                  <input 
+                    type="tel" required 
+                    placeholder="+90 5XX XXX XX XX"
+                    value={registerData.phone}
+                    onChange={(e) => setRegisterData({...registerData, phone: e.target.value})}
+                    disabled={status === "sending"}
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label>Kurumsal E-posta</label>
+                  <input 
+                    type="email" required 
+                    value={registerData.email}
+                    onChange={(e) => setRegisterData({...registerData, email: e.target.value})}
+                    disabled={status === "sending"}
+                  />
+                </div>
+                <button 
+                  type="submit" 
+                  className="btn btn-primary" 
+                  style={{ width: "100%", marginTop: "1rem" }}
+                  disabled={status === "sending"}
+                >
+                  {status === "sending" ? "Gönderiliyor..." : status === "error" ? "❌ Hata — Tekrar Dene" : "Kayıt Talebi Gönder"}
+                </button>
+              </form>
+            )}
+          </>
         )}
       </div>
     </div>
