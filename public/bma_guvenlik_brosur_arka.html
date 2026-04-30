@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMA Güvenlik Broşürü - Arka Kapak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bma: {
+                            dark: '#0a0a0a',
+                            light: '#1f1f1f',
+                            gold: '#d4af37',
+                            goldlight: '#f9e596',
+                            text: '#e0e0e0',
+                            accent: '#2ecc71'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #333; /* Dark background for preview area */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+        }
+        
+        /* Tri-fold back panel dimensions (approximate A4 tri-fold panel: 99x210mm) */
+        /* Scaled up for web preview while maintaining aspect ratio */
+        .brochure-panel {
+            width: 380px; 
+            height: 800px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Ambient Glow Effects */
+        .glow-circle-1 {
+            position: absolute;
+            top: -10%;
+            left: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .glow-circle-2 {
+            position: absolute;
+            bottom: -5%;
+            right: -20%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(46,204,113,0.1) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(212,175,55,0.3);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+        }
+        
+        /* Subtle texture overlay */
+        .texture {
+            position: absolute;
+            inset: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- BROCHURE PANEL START -->
+    <div class="brochure-panel flex flex-col p-8 text-bma-text">
+        <div class="glow-circle-1"></div>
+        <div class="glow-circle-2"></div>
+        <div class="texture"></div>
+
+        <!-- Header -->
+        <div class="z-10 text-center mb-8 mt-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-black border border-bma-gold/30 mb-3">
+                <i class="fa-solid fa-shield-halved text-bma-gold text-xl"></i>
+            </div>
+            <h1 class="text-xl font-bold tracking-wider text-white uppercase mb-1">Kurumsal Güvenlik</h1>
+            <div class="h-0.5 w-12 bg-bma-gold mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Main Hook -->
+        <div class="z-10 mb-8 text-center">
+            <h2 class="text-2xl font-extrabold text-white leading-tight mb-3">
+                Sizin Şifreleriniz, <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-bma-gold to-yellow-200">
+                    Sizin Kontrolünüzde.
+                </span>
+            </h2>
+            <p class="text-xs text-gray-400 font-light leading-relaxed">
+                Yapay Zeka sistemlerimizde <strong>"Sıfır Bilgi" (Zero-Knowledge)</strong> mimarisi kullanıyoruz. API anahtarlarınız ve CRM verileriniz sistemlerimizden tamamen izoledir.
+            </p>
+        </div>
+
+        <!-- The 3 Methods -->
+        <div class="z-10 flex-grow space-y-4">
+            
+            <!-- Method 1 -->
+            <div class="glass-card p-4 rounded-xl flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center mt-0.5">
+                    <i class="fa-solid fa-mobile-screen text-bma-text text-sm"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-1">1. Tak-Çalıştır Kurulum</h3>
+                    <p class="text-[10px] text-gray-400 leading-snug">
+                        Sistemi ilk açtığınızda karşınıza çıkan güvenli ekrana şifrelerinizi girersiniz. Şifreler cihazınızda kalır, bize iletilmez.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Method 2 -->
+            <div class="glass-card p-4 rounded-xl flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center mt-0.5">
+                    <i class="fa-solid fa-cloud-arrow-up text-bma-text text-sm"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-1">2. Bulut Yetki Devri</h3>
+                    <p class="text-[10px] text-gray-400 leading-snug">
+                        Sistemi buluta kurar ve yetkiyi tamamen size devrederiz. Kendi panelinizden şifreleri girer, erişimimizi kesersiniz.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Method 3 -->
+            <div class="glass-card p-4 rounded-xl flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center mt-0.5">
+                    <i class="fa-solid fa-server text-bma-text text-sm"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-1">3. On-Premise Teslimat</h3>
+                    <p class="text-[10px] text-gray-400 leading-snug">
+                        Kapalı kutu yazılımı IT ekibinize teslim ederiz. Kendi iç ağınızda, kendi sunucularınızda maksimum güvenlikle çalıştırırsınız.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer / Trust Badge -->
+        <div class="z-10 mt-auto pt-6 border-t border-white/10 text-center">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <i class="fa-solid fa-check-circle text-bma-accent text-xs"></i>
+                <span class="text-[10px] font-semibold text-gray-300 uppercase tracking-widest">Model Eğitimi Yapılmaz</span>
+            </div>
+            <p class="text-[9px] text-gray-500 mb-4">
+                Tüm verileriniz uçtan uca şifrelidir ve OpenAI kurumsal gizlilik politikaları gereğince yapay zeka eğitiminde kullanılamaz.
+            </p>
+            
+            <!-- BMA Branding bottom -->
+            <div class="flex flex-col items-center justify-center">
+                <span class="text-xs font-bold text-white tracking-widest uppercase mb-1">Grup BMA</span>
+                <span class="text-[8px] text-bma-gold">AI Business Solutions</span>
+            </div>
+        </div>
+
+    </div>
+    <!-- BROCHURE PANEL END -->
+
+</body>
+</html>

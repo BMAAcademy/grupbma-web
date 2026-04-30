@@ -62,6 +62,9 @@ export default function NoraPage() {
                 <div style={{ fontSize: "0.85rem", color: "#10b981", marginTop: "0.25rem", fontWeight: "600" }}>
                   (İlk 3 ay %20 indirimle $103 / Ay)
                 </div>
+                <div style={{ fontSize: "0.85rem", color: "#8b5cf6", marginTop: "0.35rem", fontWeight: "600" }}>
+                  🎁 Yıllık ödemede 10 ay öde, 12 ay kullan
+                </div>
               </div>
               <ul className={styles.featuresList}>
                 <li>WhatsApp üzerinden 7/24 iletişim</li>
@@ -84,6 +87,9 @@ export default function NoraPage() {
                 <div style={{ fontSize: "0.85rem", color: "#10b981", marginTop: "0.25rem", fontWeight: "600" }}>
                   (İlk 3 ay %20 indirimle $263 / Ay)
                 </div>
+                <div style={{ fontSize: "0.85rem", color: "#8b5cf6", marginTop: "0.35rem", fontWeight: "600" }}>
+                  🎁 Yıllık ödemede 10 ay öde, 12 ay kullan
+                </div>
               </div>
               <ul className={styles.featuresList}>
                 <li>Lite paketindeki her şey</li>
@@ -105,6 +111,9 @@ export default function NoraPage() {
                 <div className={styles.monthlyFee}>$699 <span>/ Ay</span></div>
                 <div style={{ fontSize: "0.85rem", color: "#10b981", marginTop: "0.25rem", fontWeight: "600" }}>
                   (İlk 3 ay %20 indirimle $559 / Ay)
+                </div>
+                <div style={{ fontSize: "0.85rem", color: "#8b5cf6", marginTop: "0.35rem", fontWeight: "600" }}>
+                  🎁 Yıllık ödemede 10 ay öde, 12 ay kullan
                 </div>
               </div>
               <ul className={styles.featuresList}>

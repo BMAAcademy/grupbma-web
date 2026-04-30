@@ -22,18 +22,19 @@ export default function Urunler() {
       link: "/urunler/nora"
     },
     {
-      title: "AI Coach – BEMA",
-      desc: "Şirketinizin tüm ürün, süreç ve müşteri verisini öğrenerek satıştan operasyona kadar her noktada aktif rol alan yapay zeka destekli akıllı iş asistanı. Doğru ürünü önerir, teklif hazırlar, süreçleri yönetir ve tüm kararlarını hem veriye hem de çalışan karakter analizine göre optimize eder.",
+      title: "AI Satış ve Operasyon Asistanı – BEMA",
+      desc: "Şirketinizin tüm ürün kataloğunu, teknik dokümantasyonunu ve süreç bilgisini ezbere öğrenerek satış personelinize WhatsApp ve Telegram üzerinden 7/24 anlık destek sağlayan yapay zeka destekli akıllı iş asistanı. Sadece soru yanıtlamakla kalmaz; profesyonel teklifler hazırlar, proaktif müşteri takibi yapar, sözleşmeleri hukuki olarak denetler, dinamik rakip istihbaratı sunar ve yönetim için tahmine dayalı ciro analizleri üretir. Lite, Pro ve Enterprise paket seçenekleriyle her ölçekteki satış ekibinin performansını katlayan premium bir yapay zeka partneridir.",
       features: [
+        "Lite, Pro ve Enterprise Paket Seçenekleri",
         "Ürün ve Teknik Dokümantasyon Hakimiyeti",
-        "Akıllı Ürün Öneri ve Problem Çözme Yeteneği",
-        "Karakter Analizine Göre Kişiselleştirilmiş Yönlendirme",
-        "CRM / ERP Entegrasyonu ile Anlık Raporlama",
-        "Otomatik Teklif Hazırlama ve Gönderim",
-        "Toplantı Planlama ve Takip",
-        "WhatsApp & Telegram Üzerinden Sesli / Yazılı Yönetim"
+        "Otomatik Teklif Hazırlama (PDF) ve Onaylı E-posta Gönderim",
+        "Proaktif Müşteri Takibi (Follow-up) ve CRM Entegrasyonu",
+        "Sözleşme Uygunluk Kontrolü (Kırmızı / Sarı / Yeşil Bayrak)",
+        "Dinamik Rakip İstihbaratı ve Karşı Argüman Üretimi",
+        "Tahmine Dayalı Ciro Analizi ve Yönetim Raporları"
       ],
-      image: "/images/ai_coach.png"
+      image: "/images/ai_coach.png",
+      link: "/urunler/bema"
     },
     {
       title: "AI Avukat – JURA",
