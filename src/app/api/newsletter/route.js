@@ -39,7 +39,7 @@ export async function POST(req) {
     // Append to the sheet
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range: "Sayfa1!A:C",
+      range: "A:C",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [[timestamp, email, source || "Bilinmiyor"]],
