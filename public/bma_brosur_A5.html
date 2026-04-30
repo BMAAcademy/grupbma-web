@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grup BMA - Profesyonel A5 Broşür</title>
+<!-- Fontlar -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- İkonlar -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  :root {
+    --brand-blue: #0b1f52;
+    --brand-light-blue: #2563eb;
+    --brand-accent: #3b82f6;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --bg-white: #ffffff;
+    --bg-gray: #f8fafc;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --border-color: #e2e8f0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #cbd5e1; /* Önizleme için dış arka plan */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* A5 Dimensions: 148mm width x 210mm height */
+  .page {
+    width: 148mm;
+    height: 210mm;
+    background: var(--bg-white);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+
+  @page {
+    size: A5;
+    margin: 0;
+  }
+  
+  @media print {
+    body { background: none; padding: 0; gap: 0; }
+    .page { box-shadow: none; }
+  }
+
+  /* ================= SAYFA 1 ================= */
+  .p1-hero {
+    display: flex;
+    height: 95mm;
+    padding: 8mm 6mm 0 8mm;
+    position: relative;
+  }
+  .p1-hero-left {
+    flex: 0 0 55%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+  .p1-logo {
+    max-width: 35mm;
+    margin-bottom: 6mm;
+  }
+  .p1-title {
+    font-size: 19pt;
+    font-weight: 800;
+    color: var(--brand-blue);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 3mm;
+  }
+  .p1-title span { color: var(--brand-accent); }
+  .p1-subtitle {
+    font-size: 8.5pt;
+    color: var(--text-muted);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  
+  .p1-hero-right {
+    position: absolute;
+    right: -5mm;
+    top: 5mm;
+    width: 85mm;
+    height: 95mm;
+    z-index: 1;
+  }
+  .p1-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right top;
+  }
+
+  .p1-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4mm;
+    padding: 0 8mm;
+    margin-top: 2mm;
+    flex: 1;
+  }
+  .feature-card {
+    background: var(--bg-white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .card-number {
+    position: absolute;
+    top: 3mm;
+    left: 3mm;
+    background: var(--brand-light-blue);
+    color: white;
+    font-size: 8pt;
+    font-weight: 800;
+    width: 6mm;
+    height: 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .card-img-wrapper {
+    height: 28mm;
+    width: 100%;
+    overflow: hidden;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .card-content {
+    padding: 3mm 2.5mm;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-title {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--brand-blue);
+    margin-bottom: 1.5mm;
+    line-height: 1.2;
+  }
+  .card-desc {
+    font-size: 6.5pt;
+    color: var(--text-dark);
+    margin-bottom: 2mm;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+  .card-list {
+    list-style: none;
+    margin-top: auto;
+  }
+  .card-list li {
+    font-size: 5.5pt;
+    color: var(--text-muted);
+    margin-bottom: 1mm;
+    position: relative;
+    padding-left: 2.5mm;
+    line-height: 1.2;
+  }
+  .card-list li::before {
+    content: "•";
+    color: var(--brand-accent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 8pt;
+  }
+
+  .p1-footer {
+    margin-top: auto;
+    padding: 4mm 8mm 10mm 8mm; /* Aşağıdan 1cm (10mm) boşluk garantilendi */
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+  }
+  
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+  }
+  
+  .footer-demo {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
+  .demo-icon {
+    font-size: 14pt;
+    color: var(--brand-light-blue);
+  }
+  .demo-text {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--brand-blue);
+    line-height: 1.2;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+    font-size: 7.5pt;
+    color: var(--brand-blue);
+    font-weight: 500;
+  }
+  .contact-item i {
+    color: var(--brand-accent);
+    width: 3mm;
+  }
+
+  .footer-phones {
+    display: flex;
+    flex-direction: column;
+    gap: 1mm;
+    align-items: flex-start;
+  }
+  .phone-title {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: var(--brand-accent);
+  }
+  .phone-number {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: var(--brand-blue);
+    display: flex;
+    align-items: center;
+    gap: 1.5mm;
+  }
+  .phone-number i { color: var(--brand-light-blue); }
+
+  .footer-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1mm;
+  }
+  .footer-qr img {
+    width: 14mm;
+    height: 14mm;
+    mix-blend-mode: multiply;
+  }
+  .qr-text {
+    font-size: 5.5pt;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  /* ================= SAYFA 2 ================= */
+  .p2-header {
+    text-align: center;
+    padding: 10mm 8mm 4mm;
+  }
+  .p2-header h2 {
+    font-size: 15pt;
+    font-weight: 800;
+    color: var(--text-dark);
+  }
+  .p2-header h2 span { color: var(--brand-light-blue); }
+
+  .p2-solutions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3mm;
+    padding: 0 8mm;
+  }
+  .sol-col {
+    display: flex;
+    flex-direction: column;
+  }
+  .sol-icon {
+    width: 12mm;
+    height: 12mm;
+    background: #eff6ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 3mm;
+    color: var(--brand-light-blue);
+    font-size: 14pt;
+  }
+  .sol-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: var(--brand-blue);
+    text-align: center;
+    margin-bottom: 1.5mm;
+    line-height: 1.2;
+  }
+  .sol-desc {
+    font-size: 6pt;
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 2mm;
+    line-height: 1.3;
+  }
+  .sol-list {
+    list-style: none;
+  }
+  .sol-list li {
+    font-size: 5pt;
+    color: var(--text-dark);
+    margin-bottom: 1.5mm;
+    position: relative;
+    padding-left: 2.5mm;
+    line-height: 1.2;
+  }
+  .sol-list li::before {
+    content: "✓";
+    color: var(--brand-accent);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 6pt;
+    font-weight: bold;
+  }
+
+  .p2-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3mm;
+    padding: 6mm 8mm;
+    margin-top: auto;
+  }
+  .p2-img-box {
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    height: 25mm;
+    box-shadow: var(--card-shadow);
+  }
+  .p2-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .p2-img-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 31, 82, 0.85);
+    color: white;
+    font-size: 7pt;
+    font-weight: 700;
+    padding: 1.5mm;
+    text-align: center;
+  }
+
+  .p2-trust {
+    display: flex;
+    justify-content: space-between;
+    padding: 4mm 8mm;
+    background: #f1f5f9;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5mm;
+  }
+  .trust-item i {
+    font-size: 10pt;
+    color: var(--brand-light-blue);
+  }
+  .trust-item span {
+    font-size: 6pt;
+    font-weight: 600;
+    color: var(--brand-blue);
+    line-height: 1.2;
+    max-width: 20mm;
+  }
+
+  .p2-footer {
+    text-align: center;
+    padding: 6mm 8mm 8mm 8mm;
+  }
+  .p2-footer h3 {
+    font-size: 12pt;
+    font-weight: 700;
+    color: var(--brand-blue);
+  }
+  .p2-footer h3 span {
+    color: var(--brand-light-blue);
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- ================= SAYFA 1: ÖN YÜZ ================= -->
+  <div class="page">
+    
+    <div class="p1-hero">
+      <div class="p1-hero-left">
+        <img src="./images/logo.png" alt="Grup BMA Logo" class="p1-logo" onerror="this.src='https://via.placeholder.com/150x50?text=GRUP+BMA'">
+        <h1 class="p1-title">Şirketinizi<br><span>Yapay Zeka</span> ile<br>Ölçekleyin</h1>
+        <p class="p1-subtitle">Satış, operasyon ve yönetim süreçlerinizi AI ile hızlandırın.</p>
+      </div>
+      <div class="p1-hero-right">
+        <!-- BEMA Görseli Hero kısmında -->
+        <img src="./images/ai_coach.png" alt="BEMA AI Coach" class="p1-hero-img" onerror="this.src='https://via.placeholder.com/300'">
+      </div>
+    </div>
+
+    <div class="p1-cards">
+      <!-- 01 BMA Hibrit Analiz -->
+      <div class="feature-card">
+        <div class="card-number">01</div>
+        <div class="card-img-wrapper">
+          <img src="./images/bma_hibrit_analiz.png" alt="Hibrit Analiz">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">BMA Hibrit<br>Analiz Sistemi</h3>
+          <p class="card-desc">İşe alım ve terfi süreçlerinde %99'a varan isabet. Kararlarınızı veriyle güvence altına alın.</p>
+          <ul class="card-list">
+            <li>8 Farklı Bilimsel Disiplin</li>
+            <li>Yetkinlik & Risk Raporlama</li>
+            <li>Kültürel Uyum Analizi</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 02 AI Coach BEMA -->
+      <div class="feature-card">
+        <div class="card-number">02</div>
+        <div class="card-img-wrapper">
+          <img src="./images/ai_coach.png" alt="BEMA">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">AI Coach<br>BEMA</h3>
+          <p class="card-desc">Şirket verinizi ezberleyen, teklif hazırlayıp operasyon yöneten akıllı iş ortağınız.</p>
+          <ul class="card-list">
+            <li>Satış Kapatma Desteği</li>
+            <li>CRM / ERP Entegrasyonu</li>
+            <li>Toplantı & Takvim Yönetimi</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 03 Executive AI VERA -->
+      <div class="feature-card">
+        <div class="card-number">03</div>
+        <div class="card-img-wrapper">
+          <img src="./images/ai_executive_assistant.png" alt="VERA">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Executive AI<br>VERA</h3>
+          <p class="card-desc">Yöneticiler için toplantı özetleyen ve stratejik pazar içgörüleri sunan karar asistanı.</p>
+          <ul class="card-list">
+            <li>Toplantı Özetleme</li>
+            <li>Pazar Trendi Analizi</li>
+            <li>Güvenli Bilgi Yönetimi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="p1-footer">
+      <div class="footer-demo">
+        <i class="fa-regular fa-calendar-check demo-icon"></i>
+        <div class="demo-text">Ücretsiz Demo<br>Talep Edin</div>
+      </div>
+
+      <!-- İletişim: E-posta üstte, Website altta -->
+      <div class="footer-contact">
+        <div class="contact-item">
+          <i class="fa-regular fa-envelope"></i>
+          <span>info@grupbma.com.tr</span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-globe"></i>
+          <span>www.grupbma.com.tr</span>
+        </div>
+      </div>
+
+      <div class="footer-phones">
+        <div class="phone-title">Satış & Demo Hattı</div>
+        <div class="phone-number">
+          <i class="fa-solid fa-phone"></i>
+          <span>+90 546 852 07 01</span>
+        </div>
+        <div class="phone-number">
+          <i class="fa-solid fa-phone"></i>
+          <span>+90 546 892 25 99</span>
+        </div>
+      </div>
+
+      <div class="footer-qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.grupbma.com.tr/&color=0b1f52&bgcolor=ffffff&margin=0" alt="QR">
+        <span class="qr-text">Web Sitemizi<br>Ziyaret Edin</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SAYFA 2: ARKA YÜZ ================= -->
+  <div class="page">
+    <div class="p2-header">
+      <h2>Tüm İş Süreçleriniz İçin<br><span>AI Çözümleri</span></h2>
+    </div>
+
+    <div class="p2-solutions">
+      <!-- JURA -->
+      <div class="sol-col">
+        <div class="sol-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h4 class="sol-title">AI Avukat<br>JURA</h4>
+        <p class="sol-desc">Sözleşme risklerini sıfıra indiren 7/24 hukuki asistanınız.</p>
+        <ul class="sol-list">
+          <li>Sözleşme İnceleme</li>
+          <li>Mevzuat Araştırması</li>
+          <li>Hukuki Metin Taslağı</li>
+        </ul>
+      </div>
+      <!-- VEXA -->
+      <div class="sol-col">
+        <div class="sol-icon"><i class="fa-solid fa-robot"></i></div>
+        <h4 class="sol-title">AI Satış Botu<br>VEXA</h4>
+        <p class="sol-desc">Lead'leri ısıtan, randevu oluşturan otonom satış temsilcisi.</p>
+        <ul class="sol-list">
+          <li>Lead Puanlama</li>
+          <li>Otomatik Teklif/PDF</li>
+          <li>Hazır Müşteri Aktarımı</li>
+        </ul>
+      </div>
+      <!-- NORA -->
+      <div class="sol-col">
+        <div class="sol-icon"><i class="fa-solid fa-headset"></i></div>
+        <h4 class="sol-title">Müşteri Temsilcisi<br>NORA</h4>
+        <p class="sol-desc">Empatik yanıtlarla müşteri memnuniyetini artıran destek botu.</p>
+        <ul class="sol-list">
+          <li>Duygu Analizi</li>
+          <li>7/24 Kesintisiz Destek</li>
+          <li>Satış Fırsatı Yakalama</li>
+        </ul>
+      </div>
+      <!-- Tailor-Made -->
+      <div class="sol-col">
+        <div class="sol-icon"><i class="fa-solid fa-gears"></i></div>
+        <h4 class="sol-title">Özel AI<br>Ajanları</h4>
+        <p class="sol-desc">İhtiyacınıza göre kodlanan ERP/CRM entegreli özel sistemler.</p>
+        <ul class="sol-list">
+          <li>Süreç Otomasyonu</li>
+          <li>Veri Analizi & Aksiyon</li>
+          <li>Güvenlikli Altyapı</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Alt Görseller -->
+    <div class="p2-images">
+      <div class="p2-img-box">
+        <img src="./images/sales_bot.png" alt="VEXA">
+        <div class="p2-img-label">VEXA</div>
+      </div>
+      <div class="p2-img-box">
+        <img src="./images/customer_support.png" alt="NORA">
+        <div class="p2-img-label">NORA</div>
+      </div>
+      <div class="p2-img-box">
+        <img src="./images/tailor_made.png" alt="WEB SOLUTIONS">
+        <div class="p2-img-label">BMA AI AGENTS</div>
+      </div>
+    </div>
+
+    <div class="p2-trust">
+      <div class="trust-item">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>%99'a Varan<br>Başarı Oranı</span>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Veri Odaklı<br>Karar Gücü</span>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-lock"></i>
+        <span>Yüksek Güvenlikli<br>Altyapı</span>
+      </div>
+      <div class="trust-item">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>7/24 Kesintisiz<br>AI Desteği</span>
+      </div>
+    </div>
+
+    <div class="p2-footer">
+      <h3>Tek bir sistemle <span>tüm şirketinizi yönetin.</span></h3>
+    </div>
+  </div>
+
+</body>
+</html>
