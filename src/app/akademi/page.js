@@ -99,6 +99,28 @@ export default function Akademi() {
 
       <section className={styles.akademiGrid}>
         <div className="container">
+          
+          {/* BMA Hibrit Analiz Metodolojisi Bölümü (Ürünlerden taşındı) */}
+          <div style={{ marginBottom: "4rem", background: "var(--card-bg, #ffffff)", padding: "2rem", borderRadius: "12px", boxShadow: "0 4px 20px rgba(0,0,0,0.08)", border: "1px solid var(--border-color, #e2e8f0)" }}>
+            <div style={{ display: "flex", gap: "2rem", alignItems: "center", flexWrap: "wrap" }}>
+              <div style={{ flex: "1 1 300px" }}>
+                <img src="/images/bma_hibrit_analiz.png" alt="BMA Hibrit Analiz Sistemi" style={{ width: "100%", borderRadius: "8px", objectFit: "cover" }} />
+              </div>
+              <div style={{ flex: "2 1 400px" }}>
+                <h2 style={{ fontSize: "1.8rem", color: "var(--brand-blue, #0b1f52)", marginBottom: "1rem" }}>BMA Hibrit Analiz Sistemi (Eğitim Metodolojimiz)</h2>
+                <p style={{ color: "var(--text-muted, #475569)", lineHeight: "1.6", marginBottom: "1.5rem" }}>
+                  Eğitim ve gelişim süreçlerinizi varsayımlar yerine verilerle güçlendirin. 8 farklı bilimsel ölçüm modelini (DISC, Big Five, HEXACO, RIASEC, EQ, Cognitive, Dark Triad, SJT) tek bir potada eriten sistemimiz, eğitim ihtiyaç analizinde %99'a varan isabet sağlar. BMA Akademi'deki tüm eğitimler, bu bilimsel test sonuçlarına dayanarak ekibinizin eksiklerine göre kurumunuza özel (tailor-made) tasarlanır.
+                </p>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.5rem" }}>
+                  <li style={{ fontSize: "0.9rem", color: "var(--text-dark, #0f172a)" }}>✅ 8 Farklı Bilimsel Disiplin</li>
+                  <li style={{ fontSize: "0.9rem", color: "var(--text-dark, #0f172a)" }}>✅ Detaylı Kişilik Raporlaması</li>
+                  <li style={{ fontSize: "0.9rem", color: "var(--text-dark, #0f172a)" }}>✅ Veri Odaklı Eğitim İhtiyaç Analizi</li>
+                  <li style={{ fontSize: "0.9rem", color: "var(--text-dark, #0f172a)" }}>✅ Öncesi - Sonrası Performans Kıyaslaması</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div className="grid">
             {categories.map((cat, i) => (
               <div key={i} className={styles.categoryCard}>

@@ -1,5 +1,6 @@
 "use client";
 import styles from "./urunler.module.css";
+import Link from "next/link";
 
 export default function Urunler() {
   const openDemo = () => {
@@ -8,15 +9,17 @@ export default function Urunler() {
 
   const products = [
     {
-      title: "BMA Hibrit Analiz Sistemi",
-      desc: "İnsan kaynakları ve yönetim süreçlerinizde karar alma mekanizmalarını veri ile güçlendirin. 8 farklı bilimsel ölçüm modelini (DISC, Big Five, HEXACO, RIASEC, EQ, Cognitive, Dark Triad, SJT) tek bir potada eriten sistemimiz, personel ve aday değerlendirmesinde %99'a varan başarı sağlar.",
+      title: "AI Müşteri Temsilcisi – NORA",
+      desc: "Müşterilerinizle WhatsApp, web sitesi ve santral üzerinden %100 doğal ve empatik bir tonda iletişim kuran, 7/24 kesintisiz çalışan otonom müşteri temsilciniz. NORA; yalnızca gelen soruları yanıtlamakla veya destek taleplerini CRM'e işlemekle kalmaz, aynı zamanda müşteri niyetini analiz ederek doğru zamanda dinamik çapraz satış (cross-selling) ve iskonto teklifleri sunar. Lite, Connect, Pro ve Enterprise paket seçenekleriyle her ölçekteki işletmenin operasyonel yükünü hafifletirken, doğrudan sepet ortalamanızı (AOV) ve satış hacminizi artıran premium bir yapay zeka partneridir.",
       features: [
-        "8 Farklı Bilimsel Disiplin Entegrasyonu",
-        "Detaylı Kişilik ve Yetkinlik Raporlaması",
-        "İşe Alım ve Terfi Kararlarında Veri Odaklı Yaklaşım",
-        "Kültürel Uyum ve Risk Analizi"
+        "Lite, Connect, Pro ve Enterprise Paket Seçenekleri",
+        "Duygu Analizi ve Empatik Yanıt Yeteneği",
+        "Dinamik Çapraz Satış (Cross-Selling) ve İskonto Yönetimi",
+        "CRM Otomasyonu ve Satış Fırsatı Tespiti",
+        "WhatsApp / Web Sitesi / Santral Entegrasyonu"
       ],
-      image: "/images/bma_hibrit_analiz.png"
+      image: "/images/customer_support.png",
+      link: "/urunler/nora"
     },
     {
       title: "AI Coach – BEMA",
@@ -33,18 +36,6 @@ export default function Urunler() {
       image: "/images/ai_coach.png"
     },
     {
-      title: "Executive AI Assistant – VERA",
-      desc: "Yöneticiler için tasarlanmış yeni nesil yapay zeka destekli karar asistanı. Toplantıları organize eder, görüşme notlarını özetler, CRM / ERP verilerini analiz eder ve pazar gelişmelerini takip ederek stratejik kararlar için ihtiyaç duyulan bilgiyi saniyeler içinde yönetime sunar.",
-      features: [
-        "Toplantı Organizasyonu ve Görüşme Özeti",
-        "CRM / ERP Verileriyle Yönetici Raporlama",
-        "Pazar Trendleri ve Rekabet İçgörüleri",
-        "Stratejik Karar Destek Sistemi",
-        "Yüksek Güvenlikli Kurumsal Bilgi Yönetimi"
-      ],
-      image: "/images/ai_executive_assistant.png"
-    },
-    {
       title: "AI Avukat – JURA",
       desc: "Avukatlar, hukuk büroları ve şirketlerin hukuk departmanları için geliştirilen yapay zeka destekli hukuk asistanı. Sözleşmeleri analiz eder, riskli maddeleri tespit eder, mevzuat ve içtihat araştırmalarını hızlandırır; dilekçe, sözleşme ve hukuki metin taslaklarında güçlü bir ön hazırlık desteği sunar.",
       features: [
@@ -53,23 +44,9 @@ export default function Urunler() {
         "Güncel Mevzuat Değişikliklerini Takip",
         "Dilekçe, Sözleşme ve Hukuki Metin Taslakları",
         "Dava Dosyası ve Belge Özetleme",
-        "Hukuk Büroları ve Kurumsal Hukuk Departmanları İçin Kullanım",
         "7/24 Hukuki Ön Hazırlık Asistanı"
       ],
       image: "/images/ai_hukuk_danismani.png"
-    },
-    {
-      title: "AI Müşteri Temsilcisi – NORA",
-      desc: "Müşterilerinizle WhatsApp, web sitesi veya santral üzerinden doğal ve empatik şekilde iletişim kuran yapay zeka destekli müşteri temsilcisi. Sık sorulan soruları yanıtlar, talepleri sınıflandırır, CRM’e işler ve uygun durumlarda satış fırsatlarını ilgili ekibe yönlendirir.",
-      features: [
-        "Çoklu Kanal İletişim Desteği",
-        "Duygu Analizi ve Empatik Yanıt Yeteneği",
-        "SSS ve Ürün Bilgisiyle Akıllı Yanıtlama",
-        "CRM Otomasyonu ve Talep Kaydı",
-        "Satış Fırsatı Tespiti ve Yönlendirme",
-        "WhatsApp / Web Sitesi / Santral Entegrasyonu"
-      ],
-      image: "/images/customer_support.png"
     },
     {
       title: "AI Satış Botu – VEXA",
@@ -84,6 +61,18 @@ export default function Urunler() {
       image: "/images/sales_bot.png"
     },
     {
+      title: "Executive AI Assistant – VERA",
+      desc: "Yöneticiler için tasarlanmış yeni nesil yapay zeka destekli karar asistanı. Toplantıları organize eder, görüşme notlarını özetler, CRM / ERP verilerini analiz eder ve pazar gelişmelerini takip ederek stratejik kararlar için ihtiyaç duyulan bilgiyi saniyeler içinde yönetime sunar.",
+      features: [
+        "Toplantı Organizasyonu ve Görüşme Özeti",
+        "CRM / ERP Verileriyle Yönetici Raporlama",
+        "Pazar Trendleri ve Rekabet İçgörüleri",
+        "Stratejik Karar Destek Sistemi",
+        "Yüksek Güvenlikli Kurumsal Bilgi Yönetimi"
+      ],
+      image: "/images/ai_executive_assistant.png"
+    },
+    {
       title: "AI Otomasyon Ajanları (Tailor-Made) – BMA",
       desc: "İhtiyacınıza göre sıfırdan tasarlanan yapay zeka ajanlarıyla iş süreçlerinizi otomatikleştirin. İç operasyonlardan pazarlamaya kadar her görev; veri analizi, içerik üretimi, entegrasyon ve aksiyon alma dahil olmak üzere uçtan uca sizin adınıza yönetilir.",
       features: [
@@ -91,7 +80,6 @@ export default function Urunler() {
         "İş Süreçlerinin Uçtan Uca Otomasyonu",
         "API, CRM, ERP ve 3. Parti Sistem Entegrasyonları",
         "İçerik Üretimi ve Yayınlama Otomasyonları",
-        "Veri Analizi ve Aksiyon Tetikleme",
         "Private Cloud / On-Premise Kurulum Seçenekleri",
         "Yüksek Güvenlikli Kurumsal Altyapı"
       ],
@@ -105,8 +93,7 @@ export default function Urunler() {
         "Landing Page ve Satış Sayfası Oluşturma",
         "Dönüşüm (Conversion) Odaklı UX/UI Tasarım",
         "Hızlı Kurulum ve Yayına Alma",
-        "SEO ve Performans Optimizasyonu",
-        "AI Destekli İçerik ve Metin Üretimi"
+        "SEO ve Performans Optimizasyonu"
       ],
       image: "/images/web_tasarimi_hizmeti.png"
     }
@@ -116,8 +103,8 @@ export default function Urunler() {
     <>
       <section className={styles.pageHeader}>
         <div className="container">
-          <h1 className="text-gradient">Çözümlerimiz & Ürünlerimiz</h1>
-          <p>Yapay zeka teknolojileri ve bilimsel analiz sistemleriyle kurumunuzu geleceğe taşıyın.</p>
+          <h1 className="text-gradient">Yapay Zeka Çözümlerimiz</h1>
+          <p>Yapay zeka teknolojileriyle kurumunuzun satış ve operasyon süreçlerini otomatikleştirin.</p>
         </div>
       </section>
 
@@ -137,7 +124,14 @@ export default function Urunler() {
                       <li key={i}>{feat}</li>
                     ))}
                   </ul>
-                  <button className="btn btn-outline" onClick={openDemo}>Demo Görüşmesi Ayarla</button>
+                  <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
+                    <button className="btn btn-outline" onClick={openDemo}>Demo İste</button>
+                    {product.link && (
+                      <Link href={product.link} className="btn btn-primary">
+                        Detaylı İncele
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

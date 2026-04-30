@@ -1,0 +1,180 @@
+.pageHeader {
+  padding: 4rem 1rem 3rem;
+  text-align: center;
+  background: var(--bg-white, #ffffff);
+}
+
+.intro {
+  max-width: 700px;
+  margin: 1rem auto 0;
+  color: var(--text-muted, #475569);
+  line-height: 1.6;
+}
+
+.pricingSection {
+  padding: 4rem 1rem;
+  background: var(--bg-gray, #f8fafc);
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pricingCard {
+  background: var(--bg-white, #ffffff);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-color, #e2e8f0);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.pricingCard:hover {
+  transform: translateY(-5px);
+}
+
+.popularCard {
+  border: 2px solid var(--brand-accent, #3b82f6);
+  transform: scale(1.02);
+}
+
+.popularCard:hover {
+  transform: scale(1.02) translateY(-5px);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand-accent, #3b82f6);
+  color: white;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tierName {
+  font-size: 1.5rem;
+  color: var(--brand-blue, #0b1f52);
+  margin-bottom: 0.5rem;
+}
+
+.tierSlogan {
+  font-size: 0.9rem;
+  color: var(--brand-accent, #3b82f6);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.tierDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted, #475569);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  min-height: 90px;
+}
+
+.priceBlock {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.setupFee {
+  font-size: 0.85rem;
+  color: var(--text-muted, #475569);
+  margin-bottom: 0.5rem;
+}
+
+.monthlyFee {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark, #0f172a);
+}
+
+.monthlyFee span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted, #475569);
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex: 1;
+}
+
+.featuresList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-dark, #0f172a);
+  line-height: 1.4;
+}
+
+.featuresList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brand-accent, #3b82f6);
+  font-weight: bold;
+}
+
+.highlightFeature::before {
+  content: "⭐" !important;
+}
+
+.highlightFeature {
+  font-weight: 600;
+  color: var(--brand-blue, #0b1f52) !important;
+}
+
+.featureSection {
+  padding: 5rem 1rem;
+  background: var(--bg-white, #ffffff);
+}
+
+.featureFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+}
+
+.featureImage {
+  flex: 1 1 400px;
+}
+
+.featureImage img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.featureContent {
+  flex: 1 1 400px;
+}
+
+.featureContent h2 {
+  font-size: 2rem;
+  color: var(--brand-blue, #0b1f52);
+  margin-bottom: 1.5rem;
+}
+
+.featureContent p {
+  color: var(--text-muted, #475569);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
