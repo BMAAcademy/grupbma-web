@@ -23,15 +23,15 @@ export default function Urunler() {
     },
     {
       title: "AI Satış ve Operasyon Asistanı – BEMA",
-      desc: "Şirketinizin tüm ürün kataloğunu, teknik dokümantasyonunu ve süreç bilgisini ezbere öğrenerek satış personelinize WhatsApp ve Telegram üzerinden 7/24 anlık destek sağlayan yapay zeka destekli akıllı iş asistanı. Sadece soru yanıtlamakla kalmaz; profesyonel teklifler hazırlar, proaktif müşteri takibi yapar, sözleşmeleri hukuki olarak denetler, dinamik rakip istihbaratı sunar ve yönetim için tahmine dayalı ciro analizleri üretir. Lite, Pro ve Enterprise paket seçenekleriyle her ölçekteki satış ekibinin performansını katlayan premium bir yapay zeka partneridir.",
+      desc: "Şirketinizin tüm ürün kataloğunu, teknik dokümantasyonunu ve süreç bilgisini ezbere öğrenerek satış personelinize WhatsApp ve Telegram üzerinden 7/24 anlık destek sağlayan yapay zeka destekli akıllı iş asistanı. Sadece soru yanıtlamakla kalmaz; profesyonel teklifler hazırlar, proaktif müşteri takibi yapar, sözleşmeleri hukuki olarak denetler, dinamik rakip istihbaratı sunar. Ayrıca PostgreSQL (Supabase) veritabanlarına bağlanarak kendi SQL sorgularını yazar ve milyonlarca satırlık veriden saniyeler içinde devasa ciro analizleri üretir. Lite, Pro ve Enterprise paket seçenekleriyle her ölçekteki satış ekibinin performansını katlayan premium bir yapay zeka partneridir.",
       features: [
         "Lite, Pro ve Enterprise Paket Seçenekleri",
         "Ürün ve Teknik Dokümantasyon Hakimiyeti",
         "Otomatik Teklif Hazırlama (PDF) ve Onaylı E-posta Gönderim",
         "Proaktif Müşteri Takibi (Follow-up) ve CRM Entegrasyonu",
         "Sözleşme Uygunluk Kontrolü (Kırmızı / Sarı / Yeşil Bayrak)",
-        "Dinamik Rakip İstihbaratı ve Karşı Argüman Üretimi",
-        "Tahmine Dayalı Ciro Analizi ve Yönetim Raporları"
+        "PostgreSQL (Supabase) ile Milyonlarca Satırlık Big Data Analizi",
+        "Kendi SQL Sorgusunu Yazan Otonom Ciro ve Performans Raporlama"
       ],
       image: "/images/ai_coach.png",
       link: "/urunler/bema"

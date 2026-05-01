@@ -13,9 +13,9 @@ export default function BemaPage() {
         <div className="container">
           <h1 className="text-gradient">BEMA – AI Satış ve Operasyon Asistanı</h1>
           <p className={styles.intro}>
-            Şirketinizin tüm ürün ve teknik dokümantasyonunu ezbere bilen, satış ekibinize anlık destek veren, 
-            profesyonel teklifler hazırlayıp müşterilerinize gönderen ve toplantılarınızı planlayan 
-            yapay zeka destekli iş ortağınız. Bema sayesinde satış ekibiniz operasyonel yükten kurtulur, 
+            Şirketinizin tüm ürün ve teknik dokümantasyonunu ezbere bilen, satış ekibinize anlık destek veren,
+            profesyonel teklifler hazırlayıp müşterilerinize gönderen ve toplantılarınızı planlayan
+            yapay zeka destekli iş ortağınız. Bema sayesinde satış ekibiniz operasyonel yükten kurtulur,
             tüm enerjisini satışa odaklar.
           </p>
         </div>
@@ -31,9 +31,9 @@ export default function BemaPage() {
             <div className={styles.featureContent}>
               <h2>Teknik Bilgiyi Ezberler, Teklifi Saniyede Hazırlar</h2>
               <p>
-                Bema, şirketinizin tüm ürün kataloğunu, teknik özelliklerini ve fiyat listelerini öğrenir. 
-                Satış temsilciniz müşteriyle görüşürken Telegram'dan bir sesli mesajla veya yazıyla 
-                "XYZ firmasına 50 adet A ürünü için teklif hazırla" der — Bema saniyeler içinde 
+                Bema, şirketinizin tüm ürün kataloğunu, teknik özelliklerini ve fiyat listelerini öğrenir.
+                Satış temsilciniz müşteriyle görüşürken Telegram'dan bir sesli mesajla veya yazıyla
+                "XYZ firmasına 50 adet A ürünü için teklif hazırla" der — Bema saniyeler içinde
                 profesyonel bir PDF teklif oluşturur, onayınızla müşteriye e-posta ile gönderir.
               </p>
               <ul>
@@ -56,8 +56,8 @@ export default function BemaPage() {
             <div className={styles.featureContent}>
               <h2>Takip Etmeyi Unutmaz, Her Fırsatın Peşini Bırakmaz</h2>
               <p>
-                Gönderdiğiniz teklif 3 gündür yanıtsız mı? Bema bunu fark eder ve size Telegram'dan 
-                kişiselleştirilmiş bir takip e-postası taslağı sunar. Siz "Gönder" dersiniz, o gönderir. 
+                Gönderdiğiniz teklif 3 gündür yanıtsız mı? Bema bunu fark eder ve size Telegram'dan
+                kişiselleştirilmiş bir takip e-postası taslağı sunar. Siz "Gönder" dersiniz, o gönderir.
                 İnisiyatif almaz, her adımda onayınızı bekler.
               </p>
               <ul>
@@ -84,10 +84,10 @@ export default function BemaPage() {
             <div className={styles.featureContent}>
               <h2>Sözleşme Okur, Rakip Takip Eder, Ciro Tahmin Eder</h2>
               <p>
-                Bema Pro ile satış ekibiniz sadece bir asistana değil, aynı zamanda bir operasyon yöneticisine 
-                sahip olur. Müşteriden gelen 20 sayfalık sözleşmeyi saniyeler içinde tarar ve şirket 
-                politikalarınıza aykırı maddeleri kırmızı bayraklarla raporlar. Rakiplerinizin web sitelerini 
-                düzenli takip eder, fiyat değişikliklerini algılar ve karşı argümanlar üretir. Üstelik tüm 
+                Bema Pro ile satış ekibiniz sadece bir asistana değil, aynı zamanda bir operasyon yöneticisine
+                sahip olur. Müşteriden gelen 20 sayfalık sözleşmeyi saniyeler içinde tarar ve şirket
+                politikalarınıza aykırı maddeleri kırmızı bayraklarla raporlar. Rakiplerinizin web sitelerini
+                düzenli takip eder, fiyat değişikliklerini algılar ve karşı argümanlar üretir. Üstelik tüm
                 bunları yaparken asla veri uydurmaz.
               </p>
               <ul>
@@ -192,9 +192,9 @@ export default function BemaPage() {
           <div className={styles.infoBox}>
             <h4>Önemli Not: API Maliyetleri</h4>
             <p>
-              <strong>Lite ve Pro</strong> paketlerinde yapay zeka işlem maliyetleri (OpenAI API) fiyata dahildir; 
-              kullanıcı başına günlük 50 mesaj limiti uygulanır. <strong>Enterprise</strong> paketinde ise şirket 
-              kendi OpenAI API anahtarını sisteme girer ve AI işlem maliyetlerini doğrudan kendi hesabına yansıtır; 
+              <strong>Lite ve Pro</strong> paketlerinde yapay zeka işlem maliyetleri (OpenAI API) fiyata dahildir;
+              kullanıcı başına günlük 50 mesaj limiti uygulanır. <strong>Enterprise</strong> paketinde ise şirket
+              kendi OpenAI API anahtarını sisteme girer ve AI işlem maliyetlerini doğrudan kendi hesabına yansıtır;
               bu sayede sınırsız kullanım hakkı elde eder.
             </p>
           </div>
