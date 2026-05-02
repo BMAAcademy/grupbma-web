@@ -49,42 +49,19 @@ export default function BemaPage() {
         </div>
       </section>
 
-      {/* ── Feature 2: Proaktif Takip ── */}
-      <section className={styles.featureSectionAlt}>
-        <div className="container">
-          <div className={styles.featureFlexReverse}>
-            <div className={styles.featureContent}>
-              <h2>Takip Etmeyi Unutmaz, Her Fırsatın Peşini Bırakmaz</h2>
-              <p>
-                Gönderdiğiniz teklif 3 gündür yanıtsız mı? Bema bunu fark eder ve size Telegram'dan
-                kişiselleştirilmiş bir takip e-postası taslağı sunar. Siz "Gönder" dersiniz, o gönderir.
-                İnisiyatif almaz, her adımda onayınızı bekler.
-              </p>
-              <ul>
-                <li>CRM'deki açık teklifleri günlük otomatik tarama</li>
-                <li>Müşteriye özel, doğal dilde takip e-postası taslağı</li>
-                <li>Satışçının tek dokunuşla onaylayıp göndermesi</li>
-                <li>İnisiyatif almaz — her zaman onay bekler</li>
-              </ul>
-            </div>
-            <div className={styles.featureImage}>
-              <img src="/images/bema_followup.jpg" alt="BEMA AI Proaktif Takip" />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── Feature 3: Sözleşme & Rakip & Ciro ── */}
       <section className={styles.featureSection}>
         <div className="container">
           <div className={styles.featureFlex}>
             <div className={styles.featureImage}>
-              <img src="/images/bema_pro_features.jpg" alt="BEMA Pro - Sözleşme, Rakip, Ciro" />
+              <img src="/images/bema_pro_features.jpg" alt="BEMA Manager - Sözleşme, Rakip, Ciro" />
             </div>
             <div className={styles.featureContent}>
-              <h2>Sözleşme Okur, Rakip Takip Eder, Ciro Tahmin Eder</h2>
+              <h2>Sözleşme Okur, Rakip Takip Eder, Ciro Analizi Yapar</h2>
               <p>
-                Bema Pro ile satış ekibiniz sadece bir asistana değil, aynı zamanda bir operasyon yöneticisine
+                BEMA Manager ile yöneticileriniz ve direktörleriniz sadece bir asistana değil, aynı zamanda bir operasyon yöneticisine
                 sahip olur. Müşteriden gelen 20 sayfalık sözleşmeyi saniyeler içinde tarar ve şirket
                 politikalarınıza aykırı maddeleri kırmızı bayraklarla raporlar. Rakiplerinizin web sitelerini
                 düzenli takip eder, fiyat değişikliklerini algılar ve karşı argümanlar üretir. Üstelik tüm
@@ -94,10 +71,10 @@ export default function BemaPage() {
                 <li>Sözleşme uygunluk kontrolü (Kırmızı / Sarı / Yeşil bayrak sistemi)</li>
                 <li>Dinamik rakip istihbaratı ve karşı argüman üretimi</li>
                 <li>%100 Halüsinasyon koruması — bilmiyorsa "bilmiyorum" der</li>
-                <li>Tahmine dayalı ciro analizi ve haftalık yönetim raporları</li>
+                <li>Ciro Analizi ve Yönetici Raporları</li>
                 <li>Performans anormallik uyarıları</li>
               </ul>
-              <button className="btn btn-outline" onClick={openDemo}>Pro Paket Hakkında Bilgi Al</button>
+              <button className="btn btn-outline" onClick={openDemo}>BEMA Manager Hakkında Bilgi Al</button>
             </div>
           </div>
         </div>
@@ -114,14 +91,14 @@ export default function BemaPage() {
           <div className={styles.pricingGrid}>
             {/* ── Lite ── */}
             <div className={styles.pricingCard}>
-              <h3 className={styles.tierName}>Bema Lite</h3>
-              <div className={styles.tierSlogan}>Dijital Satış Asistanınız</div>
+              <h3 className={styles.tierName}>BEMA</h3>
+              <div className={styles.tierSlogan}>Saha Satış Asistanı</div>
               <p className={styles.tierDesc}>Ürün bilgisine hakim, teklif hazırlayan ve toplantı planlayan yapay zeka destekli satış asistanınız.</p>
               <div className={styles.priceBlock}>
-                <div className={styles.setupFee}>Kurulum: $399</div>
-                <div className={styles.monthlyFee}>$89 <span>/ Kullanıcı / Ay</span></div>
+                <div className={styles.setupFee}>Kurulum: $549</div>
+                <div className={styles.monthlyFee}>$159 <span>/ Kullanıcı / Ay</span></div>
                 <div className={styles.discountBadge}>
-                  (İlk ay %20 indirimle $71.20 / Kullanıcı)
+                  (İlk ay %20 indirimle $127.20 / Kullanıcı)
                 </div>
                 <div className={styles.annualBadge}>
                   🎁 Yıllık ödemede 10 ay öde, 12 ay kullan
@@ -142,25 +119,24 @@ export default function BemaPage() {
             {/* ── Pro ── */}
             <div className={`${styles.pricingCard} ${styles.popularCard}`}>
               <div className={styles.popularBadge}>EN ÇOK TERCİH EDİLEN</div>
-              <h3 className={styles.tierName}>Bema Pro</h3>
-              <div className={styles.tierSlogan}>Proaktif Operasyon Yöneticisi</div>
-              <p className={styles.tierDesc}>Takip yapar, sözleşme okur, rakipleri izler ve ciro tahmini üretir. Satışçıdan çok daha fazlası.</p>
+              <h3 className={styles.tierName}>BEMA Manager</h3>
+              <div className={styles.tierSlogan}>Yönetici ve Analiz Asistanı</div>
+              <p className={styles.tierDesc}>Sözleşme okur, rakipleri izler ve ciro raporu üretir. Stratejik kararlar almanızı sağlar.</p>
               <div className={styles.priceBlock}>
                 <div className={styles.setupFee}>Kurulum: $699</div>
-                <div className={styles.monthlyFee}>$199 <span>/ Kullanıcı / Ay</span></div>
+                <div className={styles.monthlyFee}>$249 <span>/ Kullanıcı / Ay</span></div>
                 <div className={styles.discountBadge}>
-                  (İlk ay %20 indirimle $159.20 / Kullanıcı)
+                  (İlk ay %20 indirimle $199.20 / Kullanıcı)
                 </div>
                 <div className={styles.annualBadge}>
                   🎁 Yıllık ödemede 10 ay öde, 12 ay kullan
                 </div>
               </div>
               <ul className={styles.featuresList}>
-                <li>Lite paketindeki her şey</li>
-                <li className={styles.highlightFeature}>Onaylı Otomatik Takip (Follow-up E-posta)</li>
+                <li>BEMA paketindeki her şey</li>
                 <li className={styles.highlightFeature}>Sözleşme Uygunluk Kontrolü (Kırmızı/Sarı/Yeşil Bayrak)</li>
                 <li className={styles.highlightFeature}>Dinamik Rakip İstihbaratı ve Karşı Argüman</li>
-                <li className={styles.highlightFeature}>Tahmine Dayalı Ciro Analizi ve Yönetim Raporları</li>
+                <li className={styles.highlightFeature}>Ciro Analizi ve Yönetici Raporları</li>
                 <li>Performans anormallik uyarıları</li>
                 <li>%100 Halüsinasyon koruması (Strict RAG)</li>
               </ul>
@@ -169,17 +145,19 @@ export default function BemaPage() {
 
             {/* ── Enterprise ── */}
             <div className={styles.pricingCard}>
-              <h3 className={styles.tierName}>Bema Enterprise</h3>
+              <h3 className={styles.tierName}>BEMA Enterprise</h3>
               <div className={styles.tierSlogan}>Kurumsal Sınırsız Altyapı</div>
-              <p className={styles.tierDesc}>Kendi API anahtarınızla sınırsız kullanıcı ve mesaj hakkı. Büyük ekipler için ölçeklenebilir çözüm.</p>
+              <p className={styles.tierDesc}>Kendi API anahtarınızla sınırları kaldırın. Büyük ekipler için 2 adet Manager ve sınırsız BEMA içeren yapı.</p>
               <div className={styles.priceBlock}>
                 <div className={styles.setupFee}>Kurulum: $699</div>
-                <div className={styles.monthlyFee}>$2,599 <span>/ Ay</span></div>
+                <div className={styles.monthlyFee}>$2,399 <span>/ Ay</span></div>
               </div>
               <ul className={styles.featuresList}>
-                <li>Pro paketindeki her şey</li>
+                <li>BEMA Manager paketindeki her şey</li>
                 <li className={styles.highlightFeature}>BYOK — Kendi API Anahtarınızı Kullanın</li>
-                <li className={styles.highlightFeature}>Sınırsız Kullanıcı (Koltuk Limiti Yok)</li>
+                <li className={styles.highlightFeature}>2 Adet BEMA Manager Lisansı</li>
+                <li className={styles.highlightFeature}>Sınırsız BEMA (Satış Asistanı) Lisansı</li>
+                <li className={styles.highlightFeature}>Ekstra BEMA Manager: +$100 / Ay</li>
                 <li className={styles.highlightFeature}>Sınırsız Mesaj (Günlük Limit Yok)</li>
                 <li>Özel CRM / ERP Entegrasyonları</li>
                 <li>Öncelikli teknik destek ve SLA</li>
@@ -192,7 +170,7 @@ export default function BemaPage() {
           <div className={styles.infoBox}>
             <h4>Önemli Not: API Maliyetleri</h4>
             <p>
-              <strong>Lite ve Pro</strong> paketlerinde yapay zeka işlem maliyetleri (OpenAI API) fiyata dahildir;
+              <strong>BEMA ve BEMA Manager</strong> paketlerinde yapay zeka işlem maliyetleri (OpenAI API) fiyata dahildir;
               kullanıcı başına günlük 50 mesaj limiti uygulanır. <strong>Enterprise</strong> paketinde ise şirket
               kendi OpenAI API anahtarını sisteme girer ve AI işlem maliyetlerini doğrudan kendi hesabına yansıtır;
               bu sayede sınırsız kullanım hakkı elde eder.
