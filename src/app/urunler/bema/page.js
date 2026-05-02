@@ -59,20 +59,20 @@ export default function BemaPage() {
               <img src="/images/bema_pro_features.jpg" alt="BEMA Manager - Sözleşme, Rakip, Ciro" />
             </div>
             <div className={styles.featureContent}>
-              <h2>Sözleşme Okur, Rakip Takip Eder, Ciro Analizi Yapar</h2>
+              <h2>Maksimum Kabiliyetli Satış Direktörünüz (Gölge Yönetici)</h2>
               <p>
-                BEMA Manager ile yöneticileriniz ve direktörleriniz sadece bir asistana değil, aynı zamanda bir operasyon yöneticisine
-                sahip olur. Müşteriden gelen 20 sayfalık sözleşmeyi saniyeler içinde tarar ve şirket
-                politikalarınıza aykırı maddeleri kırmızı bayraklarla raporlar. Rakiplerinizin web sitelerini
-                düzenli takip eder, fiyat değişikliklerini algılar ve karşı argümanlar üretir. Üstelik tüm
-                bunları yaparken asla veri uydurmaz.
+                BEMA Manager, sıradan bir asistanın ötesinde, arka planda 7/24 çalışan acımasız bir veri yöneticisidir. 
+                Web sitelerini ve PDF'leri (örn: teknik föyleri) anında okuyarak rakip analizleri yapar, sahaya "Toplantı Öncesi Taktik" fısıldar. 
+                Müşterilerin kör noktalarını (Cross-Sell fırsatları) bulur, kârınızı korumak için iskonto onaylarında finansal kontralar (Gölge Fiyatlama) üretir. 
+                Ayrıca kaybedilen satışların gizli nedenlerini (Root-Cause) tespit ederek sizi uyarır.
               </p>
               <ul>
-                <li>Sözleşme uygunluk kontrolü (Kırmızı / Sarı / Yeşil bayrak sistemi)</li>
-                <li>Dinamik rakip istihbaratı ve karşı argüman üretimi</li>
-                <li>%100 Halüsinasyon koruması — bilmiyorsa "bilmiyorum" der</li>
-                <li>Ciro Analizi ve Yönetici Raporları</li>
-                <li>Performans anormallik uyarıları</li>
+                <li>Web Sitesi & PDF Tarama (Rakip İstihbaratı ve Battlecards)</li>
+                <li>Sözleşme Analizi (Kırmızı / Sarı / Yeşil Bayrak Uyarıları)</li>
+                <li>Kör Nokta Radarı (Otomatik Çapraz Satış Fırsatı)</li>
+                <li>Akıllı İskonto Yöneticisi (Finansal Koruma Taktikleri)</li>
+                <li>Toplantı Öncesi Kişi/Kurum Röntgeni ve Kök Neden Analizleri</li>
+                <li>%100 Halüsinasyon Koruması — Asla veri uydurmaz</li>
               </ul>
               <button className="btn btn-outline" onClick={openDemo}>BEMA Manager Hakkında Bilgi Al</button>
             </div>
@@ -103,9 +103,12 @@ export default function BemaPage() {
                 <div className={styles.annualBadge}>
                   🎁 Yıllık ödemede 10 ay öde, 12 ay kullan
                 </div>
+                <div style={{ color: '#25D366', fontWeight: 'bold', fontSize: '0.9rem', marginTop: '0.5rem', textAlign: 'center', backgroundColor: 'rgba(37, 211, 102, 0.1)', padding: '5px', borderRadius: '5px', border: '1px solid #25D366' }}>
+                  🟢 WhatsApp Kurumsal Entegrasyonu: +$10 / Ay
+                </div>
               </div>
               <ul className={styles.featuresList}>
-                <li>WhatsApp ve Telegram üzerinden 7/24 erişim</li>
+                <li>Telegram üzerinden 7/24 erişim (WhatsApp Opsiyonel)</li>
                 <li>Tüm ürün ve teknik dokümantasyona hakimiyet</li>
                 <li>Akıllı ürün öneri ve problem çözme</li>
                 <li>Manuel tetiklemeli teklif hazırlama (PDF)</li>
@@ -120,8 +123,8 @@ export default function BemaPage() {
             <div className={`${styles.pricingCard} ${styles.popularCard}`}>
               <div className={styles.popularBadge}>EN ÇOK TERCİH EDİLEN</div>
               <h3 className={styles.tierName}>BEMA Manager</h3>
-              <div className={styles.tierSlogan}>Yönetici ve Analiz Asistanı</div>
-              <p className={styles.tierDesc}>Sözleşme okur, rakipleri izler ve ciro raporu üretir. Stratejik kararlar almanızı sağlar.</p>
+              <div className={styles.tierSlogan}>Gölge Satış Direktörü</div>
+              <p className={styles.tierDesc}>Web/PDF okuyarak rakipleri ifşa eder. Çapraz satış fırsatları bulur, kârlılığınızı iskonto zekasıyla korur.</p>
               <div className={styles.priceBlock}>
                 <div className={styles.setupFee}>Kurulum: $699</div>
                 <div className={styles.monthlyFee}>$249 <span>/ Kullanıcı / Ay</span></div>
@@ -131,14 +134,18 @@ export default function BemaPage() {
                 <div className={styles.annualBadge}>
                   🎁 Yıllık ödemede 10 ay öde, 12 ay kullan
                 </div>
+                <div style={{ color: '#25D366', fontWeight: 'bold', fontSize: '0.9rem', marginTop: '0.5rem', textAlign: 'center', backgroundColor: 'rgba(37, 211, 102, 0.1)', padding: '5px', borderRadius: '5px', border: '1px solid #25D366' }}>
+                  🟢 WhatsApp Kurumsal Entegrasyonu: +$10 / Ay
+                </div>
               </div>
               <ul className={styles.featuresList}>
                 <li>BEMA paketindeki her şey</li>
-                <li className={styles.highlightFeature}>Sözleşme Uygunluk Kontrolü (Kırmızı/Sarı/Yeşil Bayrak)</li>
-                <li className={styles.highlightFeature}>Dinamik Rakip İstihbaratı ve Karşı Argüman</li>
-                <li className={styles.highlightFeature}>Ciro Analizi ve Yönetici Raporları</li>
-                <li>Performans anormallik uyarıları</li>
-                <li>%100 Halüsinasyon koruması (Strict RAG)</li>
+                <li className={styles.highlightFeature}>Web & PDF Tarama + Rakip Battlecardları</li>
+                <li className={styles.highlightFeature}>Kör Nokta Radarı (Çapraz Satış Keşfi)</li>
+                <li className={styles.highlightFeature}>Akıllı İskonto Yöneticisi & Gölge Fiyatlama</li>
+                <li>Sözleşme Analizi ve Yönetici Raporları</li>
+                <li>Toplantı Taktikleri ve Kaybedilen Satış Otopsisi</li>
+                <li>%100 Halüsinasyon Koruması (Kesin Veriyle Konuşur)</li>
               </ul>
               <button className="btn btn-primary" onClick={openDemo}>Hemen Başla</button>
             </div>
